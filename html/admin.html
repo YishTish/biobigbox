@@ -1,0 +1,25 @@
+<div ng-controller="adminCtrl">
+    <h4>New Users</h4>
+    <ul>
+        <li class="newUsersItem"><label>Last Day:</label>{{newusers.lastday}}</li>
+        <li class="newUsersItem"><label>Last Week:</label>{{newusers.lastweek}}</li>
+        <li class="newUsersItem"><label>Last Month:</label>{{newusers.lastmonth}}</li>
+    </ul>
+    <div class="clearfix"></div>
+
+    <table class="table">
+        <tr class="userListTableHeader">
+            <th>User Email</th><th>Member since</th><th>Last Login</th><th>Number of Files</th><th>Package</th>
+        </tr>
+        <tr ng-repeat="user in users">
+            <td>{{user.username}}</td>
+            <td>{{user.createdFormatted}}</td>
+            <td>{{user.lastLoginFormatted}}</td>
+            <td>{{filecounts[user.id]}}</td>
+            <td>
+                <select name="testSelect" class="form-control" user-id="{{user.id}}" update-package ng-model="user.packageName" ng-options="value for (key,value) in packages">
+                    </select>
+            </td>
+        </tr>
+    </table>
+</div>

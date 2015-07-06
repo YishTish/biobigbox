@@ -1,0 +1,25 @@
+<div ng-show="user.success" style="margin:5px">You have registered successfully</div>
+<div class="quickform">
+	<form name="form" ng-submit="register()" novalidate  class="form-group quickform">
+		<div class="form-group">
+			<input type="email" name="uEmail" class="form-control" placeholder="email"  ng-model="user.email" required   ng-focus="checkEmail=false" ng-blur="checkEmail=true" ng-click="emailWritten=false" id="inputWarning"/>
+			<span class="text-danger" ng-show="form.uEmail.$error.email && checkEmail">Invalid email address</span>
+		</div>
+		<div class="form-group">
+			<input type="email" name="uEmailConfirm" class="form-control" placeholder="Confirm email address"  ng-model="user.emailConfirm" required   ng-focus="checkEmail=false" ng-blur="checkEmail=true" ng-click="emailWritten=false" id="inputWarning"/>
+			<span class="text-danger" ng-show="form.uEmailConfirm.$error.email && checkEmail">Invalid email address</span>
+		</div>
+		<div class="form-group">
+			<input type="password" class="form-control" name="uPassword" placeholder="password" ng-blur="passwordWritten=true" ng-model="user.password" ng-minlength="6" required ng-click="passwordWritten=false"/>
+			<span class="text-danger" ng-show="form.uPassword.$error.minlength &amp;&amp; passwordWritten">
+				Password must contain at least 6 characters
+			</span>
+		</div>
+		<div style="clear:both" class="form-group">
+			<button type="submit"  value="send" class="btn btn-info" ng-disabled="form.$invalid">Register</button>	
+		</div>
+	</form>
+</div>
+<div class="quickform-error">
+    <span ng-show="user.error"> {{ user.error }} </span>
+</div>

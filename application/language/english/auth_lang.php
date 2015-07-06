@@ -1,0 +1,21 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+$lang['auth_login_failed'] = 'Username or password was incorrect.  Please try again.';
+$lang['auth_logged_out'] = 'You were logged out successfully.';
+$lang['auth_invalid_email'] = 'You entered an invalid email address. Please try again.';
+$lang['auth_password_mismatch'] = 'The passwords you entered do not match. Please try again.';
+$lang['auth_password_6_chars'] = 'Password must be at least 6 characters. Please try again.';
+$lang['auth_user_exists'] = 'A user account with that email address exists.  Please login above.';
+$lang['auth_registered'] = 'Registration successful.  You may now login above.';
+$lang['auth_pwd_updated'] = 'Your password was successfully updated.';
+$lang['auth_pwd_updated_login'] = 'Your password was successfully updated. You may now login.';
+$lang['auth_not_reg'] = 'The email address you entered is not registered.';
+$lang['auth_pwd_sent'] = 'Instructions for resetting your password have been sent to your email address.';
+$lang['auth_send_error'] = 'There was a problem sending email.';
+$lang['auth_pwd_reminder'] = 'BioBigBox Password Reset';
+$lang['auth_uuid_mismatch'] = 'There was a problem with the link you clicked.';
+$lang['auth_newpassword'] = 'Reset Password';
+$lang['auth_newpass'] = 'New Password';
+$lang['auth_retypepass'] = 'Retype New Password';
+$lang['auth_btn_save'] = 'Save';
+$lang['auth_btn_cancel'] = 'Cancel';

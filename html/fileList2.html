@@ -1,0 +1,48 @@
+<div>
+<table class="table table-condenced fileTable" style="display:none">
+	<thead>
+		<tr>
+			<th width="200px">File name</th>	<th width="120px"> file Size </th>	<th width="170px">Created</th>
+		</tr>
+	</thead>
+	<tr><th colspan="3">New Files</th></tr>
+	<tr ng-repeat="tfile in getTempFiles() | startFrom:startingPoint | limitTo:numPerPage">
+		<td><a href="{{tfile.url}}" target="fileViewer">{{tfile.name }}</a> ({{ formatFileSize(tfile) }})</td>
+		<td><select ng-model="statuses" >
+			<option ng-repeat="status in statuses" value="status.id">{{status.name}}</option>
+		</select></td>
+		<td>{{ tfile.formatedDate}}</td>
+		<!-- <td><button type="button" id="button" ng-click="deleteFile(file.id)" class="btn btn-danger">X</button></td> -->
+	</tr>
+	<tr><th colspan="3">My Vault</th></tr>
+	<tr ng-repeat="file in files | startFrom:startingPoint | limitTo:numPerPage" ng-hide="true">
+		<td><a href="{{file.url}}" target="fileViewer">{{ file.filename }}</a> ({{ formatFileSize(file) }})</td>
+		<td><select ng-model="file.status" ng-options="status.id as status.name for status in statuses" ng-change="updateStatus(file.id,file.status)" class="control-label">
+		</select></td>
+		<td><input type="text" ng-model="file.patientName" placeholder="Patient's name" ng-blur="setPatient(file.id,file.patient)" class="form-control"/></td>
+		<td>{{ file.created | date:"dd/MM/yy"}}</td>
+		<!-- <td><button type="button" id="button" ng-click="deleteFile(file.id)" class="btn btn-danger">X</button></td> -->
+	</tr>
+	</table>
+	<div ng-repeat="file in files | startFrom:startingPoint | limitTo:numPerPage" class="fileList">
+		<div class="fileDetail">
+			<div class="entryLabel">File Name: </div> 		<div class="entryValue">{{file.filename}}</div>
+		</div>
+		<div>
+			<div class="entryLabel">Upload date: </div>		<div class="entryValue"> {{file.created}}</div>
+		</div>
+		<div>
+			<div class="entryLabel">Patients name: </div>	<div class="entryValue">{{file.patientName}}</div> 
+										<div style="display:none"><input type="text" ng-model="file.patientName" placeholder="Patient's name" ng-blur="setPatient(file.id,file.patient)" class="form-control"/>	</div>
+		</div>
+		<div>	
+			<div class="entryLabel">Status:</div>	<div class="entryValue">{{file.status}}</div>
+								<div style="dispaly:none"><select ng-model="file.status" ng-options="status.id as status.name for status in statuses" ng-change="updateStatus(file.id,file.status)" class="control-label"></select></div>
+		</div>
+		<div>
+			<div>Notes:</div>
+		</div>
+	</div>
+
+
+</div>

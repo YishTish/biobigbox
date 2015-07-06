@@ -1,0 +1,227 @@
+body {
+    color: black;
+} 
+footer {
+    color: #444;
+}
+footer a, footer a:hover {
+    color: black;
+}
+.navbar {
+    background: black;
+    padding: 10px 0 5px;
+    margin: 0;
+}
+.navbar .nav > li > a {
+    color: white;
+}
+.navbar .nav > li > a:hover {
+    color: #999;
+}
+.navbar-inner {
+    background: black;
+    font-size: 16px;
+    filter: none;
+}
+.navbar a.brand {
+    font-size: 24px;
+    padding-right: 30px;
+}
+.slider-outer {
+    position: relative;
+    background-color: black;
+    color: #f0f0f0;
+    height: 250px;
+    padding-top: 50px;
+    overflow: hidden;
+}
+.slider-outer div.slide {
+    margin-top: 0;
+}
+.slider-outer div.image {
+    margin-left: 50px;
+    /* width: 450px; 
+    float: left; */
+}
+.slider-outer img {
+    margin: 0 60px;
+    max-width: 350px;
+    height: 194px;
+}
+.slider-outer div.textblock {
+    /*float: left;
+    padding-right: 50px;
+    width: 600px; */ 
+    font-family: Arial Narrow, sans-serif;
+}
+.slider-outer div.textblock p {
+    font-size: 32px;
+    line-height: 36px;
+    padding: 0 75px 0 25px;
+}
+.slider-outer div.textblock h2 {
+    font-size: 36px;
+    line-height: 40px;
+    padding: 0 75px 0 25px;
+}
+.slider-outer div.textblock a {
+    font-family: Arial, sans-serif;
+}
+.slider-outer div#buttons {
+    position: absolute;
+    bottom: 30px;
+    right: 40px;
+}
+.alert {
+    margin-top: 18px;
+}
+form.form-inline {
+    margin-bottom:0;
+}
+.blocks {
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.title-block {
+    margin: 15px 10px 10px 10px;
+}
+.text-block {
+    width: 75%;
+    margin-left: 25px;
+    margin-bottom: 25px;
+}
+.text-block p {
+    font-size: 16px;
+}
+.table th.column-select,
+.table td.column-select {
+    text-align:center;
+    width:50px;
+}
+.filter-bar {
+    padding:9px;
+    margin-bottom:9px;
+}
+th.dm-filename,
+td.dm-filename {
+    padding-left:10px;
+}
+.dm-head-text {
+    padding-left: 10px;
+}
+.dm-head-text a {
+    color: white;
+}
+.dm-head-text a:hover {
+    color: #999;
+    text-decoration: none;
+}
+img.dm_thumb {
+    display: inline;
+}
+.dm-top5 {
+    margin-top: 5px;
+}
+.dm-btn-num {
+    min-width: 30px;
+}
+tr.status-open td {
+    background-color: #ffffdd !important;
+}
+tr.not-viewed td {
+    background-color: #ddffdd !important;
+}
+td.column-status {
+    padding: 1px;
+    width: 152px;
+}
+select.statusdd {
+    margin-bottom: 0;
+}
+a.dm-status {
+    padding-left: 5px; 
+    vertical-align: middle;
+    color: #333;      
+}
+a.dm-status:hover {
+    text-decoration: none;
+}
+a.download {
+    /* color: inherit; */
+}
+a.download:hover {
+    /* color: white;
+    background-color: #808080;
+    text-decoration: none; */
+}
+a.btn.disabled, a.btna[disabled],
+button.btn.disabled, button.btn[disabled] {
+    opacity: .35;
+    filter: alpha(opacity=35);
+}
+.btn-black {
+    color: #555;
+}
+.btn-black:hover {
+    color: black;
+}
+.pad25 {
+    padding:  25px;
+}
+.percent40 {
+    width: 40%;
+}
+.percent15 {
+    width: 15%;
+}
+.percent28 {
+    width: 28%;
+}
+td.center {
+    text-align: center;
+}
+tr.text-middle td {
+    vertical-align: text-bottom;
+}
+td.column-status .caret {
+    vertical-align: middle;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+th.currentpackage, td.currentpackage, .table tbody tr:hover th.currentpackage, .table tbody tr:hover td.currentpackage {
+    background-color: skyblue;
+    border-width: 0;
+}
+th.center {
+    text-align: center;
+}
+.table tbody tr:hover td, .table tbody tr:hover th {
+    /* background: none; */
+}
+.table-package td, .table-package th {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+span.error {
+    color: #dd0000;
+}
+.no-margin { margin: 0; }
+div.controls div.note {font-style: italic; font-size: 12px;}
+div.dv-blocks div.image-outer{
+    margin: 5px 0 8px 0;
+/*    margin-left: 65px; */
+    text-align: center;
+    height: 150px;
+}
+div.dv-blocks div.image-outer img {
+    height: 100%; 
+}
+img.sendafile {
+/*    padding-top: 40px; */
+}
+td select {
+    margin-bottom: 0;
+    line-height: inherit;
+    height: 20px;
+    padding: 0;
+}

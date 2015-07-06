@@ -1,0 +1,40 @@
+<div class="masthead clearfix">
+           
+              <div class="nav masthead-div">
+
+              <ul class="nav masthead-nav">
+                <li class="masthead-brand" onclick="window.open('/','_self')"><span class="bio">bio</span><span class="big">big</span><span class="box">box</span></li>
+                <li class="masthead-brand"><span class="bio"> | </span></li>
+               <!-- <div class="masthead-brand-slogan">HIPAA Compliant File Transfer and Storage System.</div> 
+               </ul>
+               <div class="clearfix"></div>
+               <ul class="nav masthead-nav" > -->
+                <li ng-if="userLoggedIn"><div class="title">{{ getUserName() }}</div></li>
+                <li ng-if="userLoggedIn"><a href="#/files" ng-class="{'selected-a': selectedTab == 'files'}"  ng-click="closeDiv()">My Files</a></li>
+                <li ng-if="!userLoggedIn"><a href="javascript:void(0)"  id="registerLink"  ng-init="isActive=false" ng-class="{'selected-a': selectedTab == 'register'}"  ng-click="showRegisterForm()">Register</a></li>
+                <li ng-if="!userLoggedIn"><a href="javascript:void(0)" id="loginLink"  ng-class="{'selected-a': selectedTab == 'login'}"  ng-click="showLoginForm()">Login</a></li>
+                <li ng-if="userLoggedIn"><a href="javascript:void(0)" id="loginLink"  ng-click="logout()">Logout</a></li>
+                <li><a href="javascript:void(0)" id="uploadLink" ng-class="{'selected-a': selectedTab == 'send'}" ng-click="showUploadDiv('send')">Send</a></li>
+                <li><a href="javascript:void(0)" id="uploadLink" ng-class="{'selected-a': selectedTab == 'upload'}" ng-click="showUploadDiv('upload')">Upload</a></li>
+                <li ng-show="userLoggedIn && user.packageid==1 && !isAdmin"><a href="http://pages.biobigbox.com/pricing">Upgrade</a></li> 
+                <li ng-show="isAdmin"><a href="#/admin" ng-class="{'selected-a': selectedTab == 'admin'}"  ng-click="selectedTab = 'admin'">Admin</a></li>
+                  <li>
+                  <div class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon-align-justify"></span>
+                    <span class="caret"></span>
+                    </div>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
+                    <li role="presentation" ng-repeat="link in dropDownLinks">
+                        <a role="menuitem" tabindex="-1" target="static" href="http://pages.biobigbox.com/{{link.link}}">{{link.text}}</a>
+                    </li>
+                    </ul>
+                </li>
+              </ul>
+              <div ng-show="showForm()">
+                <div ng-include src="showForm()" dynamic="html"></div>  
+                <div style="text-align:center" ng-click="closeDiv()"><i  class="fa fa-sort-asc"></i></div>
+              </div>
+
+
+    </div>
+</div>

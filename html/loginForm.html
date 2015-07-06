@@ -1,0 +1,27 @@
+<div class="quickform">
+	<form name="form" ng-submit="login()" novalidate class="form-group quickform">
+		<div class="form-group">
+			<input type="email" name="uEmail" class="form-control" placeholder="email"  ng-model="user.username" required ng-focus="checkEmail=false" ng-blur="checkEmail=true" id="inputWarning"/>
+			<span class="text-danger" ng-show="form.uEmail.$error.email && checkEmail">Invalid email address</span>
+		</div>
+		<div>
+			<input type="password" class="form-control" name="uPassword" placeholder="password" ng-blur="passwordWritten=true" ng-model="user.password" ng-minlength="6" required ng-click="passwordWritten=false"/>
+			<span class="text-danger" ng-show="form.uPassword.$error.minlength &amp;&amp; passwordWritten">
+				Password must contain at least 6 characters
+			</span>
+		</div>
+		<div style="clear:both">
+			<div class="forgotPassword" title="Type in your email address in the email box" ng-click="forgotPassword()">{{orgotPasswordText}}</div>
+			<div class="text-danger" ng-show="forgotPasswordError">
+				Fill in the Email Address field
+			</div>
+		</div>
+		<div style="clear:both">
+			<button type="submit" class="btn btn-info" value="send" ng-disabled="form.$invalid">Login</button>	
+		</div>
+	</form>
+</div>
+<div><a href="javascript:void()" ng-click="forgotPassword()">{{getForgotPasswordText()}}</a></div>
+ <div class="quickform-error">
+        <span ng-show="error"> {{ error }} </span>
+      </div>

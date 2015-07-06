@@ -1,0 +1,57 @@
+<div class="center-div-form" ng-controller="userCtrl">
+<form-message  type="{{ message.type }}" message="{{ message.text }}"></form-message>
+	<form name="form" ng-submit="saveProfile()" role="form" novalidate>
+		<div style="float:left;padding:10px;">
+			<div class="form-group">
+				<label for="user.firstname">Email Address</label>
+				<input type="email" name="uEmail" class="form-control" placeholder="email" size="18" ng-model="user.username" ng-readonly="true"/>
+			<span style="font-size=6px;color:red" ng-show="form.uEmail.$error.email">
+				Please type in a valid email address
+			</span>
+			</div>
+			<div class="form-group">
+				<label for="user.firstname">First Name</label>
+				<input type="text" class="form-control" name="uFname" placeholder="First Name" size="18" ng-model="user.firstname"/>
+			</div>
+			<div class="form-group">
+				<label for="user.lastname">Last Name</label>
+				<input type="text" class="form-control" name="uLname" placeholder="Last Name" size="18" ng-model="user.lastname"/>
+			</div>
+		</div>
+		<div style="float:right; padding:10px">
+			<div class="form-group">
+				<label for="user.typeid">User Type</label>
+				<select name="user.typeid"  class="form-control" ng-model="user.typeid">
+					<option ng-selected="{{userType.id == user.typeid}}" 
+							ng-repeat="userType in userTypesArray"
+							value="{{userType.id}}"
+							>
+						{{ userType.name }}
+					</option>
+
+				</select>
+				
+			</div>
+			<div class="form-group">
+				<label for="user.smsnumber">Mobile Number</label>
+				<input type="text" class="form-control" name="uMobile" placeholder="Mobile Number" size="18" ng-model="user.smsnumber"/>
+			</div>
+			<div class="form-group">
+				<input type="checkbox" name="uMobileNotifications" size="18" ng-model="user.smsnotifications" ng-checked="receiveSms()" />
+				<label for="user.smsnotifications">Receive SMS Notifications</label>
+			</div>
+			<div class="form-group">
+				<input type="checkbox" name="uEmailNotifications" size="18" ng-model="user.emailnotifications" ng-checked="receiveEmail()"/>
+				<label for="user.smsnotifications">Receive Email Notifications</label>
+			</div>
+		</div>
+		<div style="text-align:center;clear:both">
+			<div class="form-group">
+			<button type="submit"  value="send">Send</button>
+			</div>
+		</div>
+	</form>
+</div>
+ <div class="quickform-error">
+        <span ng-show="user.error"> {{ user.error }} </span>
+      </div>

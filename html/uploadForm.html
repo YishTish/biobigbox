@@ -1,0 +1,28 @@
+<link href="css/upload.css" rel="stylesheet" type="text/css" />
+<div class="outer row" ng-controller="fileCtrl">
+    <form name="form" class="form-group quickform">
+        <div class="offset0">
+            <div  class="form-group">
+                <!--<label class="control-label">Enter your email address:</label>-->
+               <input class="form-control upload-form-control"  name="owner" id="owner" placeholder="Your email address" ng-model="user.username" ng-readonly="loggedIn"/>
+                
+                <!--<label size="20px">Share with:</label> -->
+            </div>
+            <div class="form-group">
+               <input class="form-control  upload-form-control"   name="sharee" id="sharee" placeholder="Share with (Email address)" />
+            </div>
+            <div id="filechooser" class="upload-file-chooser">
+                <h2>Drop files here</h2>
+                <h3>or <br/>click to select</h3>
+                <input type="file" id="files" name="files[]" multiple />
+            </div>
+            <div class="alert alert-error" style="font-size:12px">Do not close this window until the upload is complete.</div>
+            <div id="statuses" class="well upload-form-control">
+                <h3>Upload Progress</h3><br />
+            </div>
+        </div>
+    </form>
+</div>
+ <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/js/upload.js"></script>

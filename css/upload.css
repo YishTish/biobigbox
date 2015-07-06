@@ -1,0 +1,65 @@
+.outer {
+    margin-top: 20px;
+}
+#filechooser {
+    position:  relative;
+    border-style: dashed;
+    border: 1px dashed gray;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    background-color:white;
+    margin-right:5%;
+    text-align:center;
+    color:rgba(123, 107, 107, 0.44)
+}
+#filechooser input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+#filechooser:hover{
+  background-color:rgba(123, 121, 203, 0.3);
+}
+#progress_bar {
+  width: 200px;
+  margin: 10px 0;
+  padding: 3px;
+  border: 1px solid #000;
+  font-size: 14px;
+  clear: both;
+  opacity: 0;
+  -moz-transition: opacity 1s linear;
+  -o-transition: opacity 1s linear;
+  -webkit-transition: opacity 1s linear;
+}
+.loading {
+  opacity: 1.0;
+  width: 265px;
+  display: inline-block;
+  border: 1px solid silver;
+}
+.percent {
+  background-color: #99ccff;
+  height: auto;
+  width: 0;
+  display: inline-block;
+}
+.full {
+    display: none;
+    //background-color: #80FF80;
+}
+label {
+    display: inline-block;
+    width: 35%;
+    padding-right: 4px;
+} 
+.passive{
+  display: none;
+}
+.active{
+  display: block;
+}

@@ -1,0 +1,56 @@
+<div ng-repeat="file in fileList"  class="fileRange" >
+	<div class="fileMeta">
+		<div class="fileDetail line">
+			<div ng-click="showDetails=!showDetails">
+				<i class="fa fa-caret-down detailsCaret"  title="Show Details" ng-hide="showDetails" tooltip="Show Details"></i>
+				<i class="fa fa-caret-up detailsCaret" ng-show="showDetails" tooltip="Show Details"></i>
+			</div>
+			<div class="deleteDiv" tooltip="Delete File"><i class="fa fa-trash"   del file-id="{{file.id}}"></i></div>
+			<div class="downloadDiv" tooltip="Download File"><a href="{{file.url}}" download><i class="fa fa-download"  ></i></a></div>
+			<div class="entryHeader entryHeader-fname">   {{file.filename}} </div>
+            <div class="entryHeader entryHeader-date"> {{file.created}}</div>
+			<div ng-click="showDetails=!showDetails">
+			<!-- </div>-->
+
+
+
+
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="fileBody" style="width:100%" ng-show="showDetails">
+		<div class="fileDetail editableDetail">
+			<div class="entryLabel">Patient: </div>
+				<div class="displayingDiv">
+					<i updatevalue class="fa fa-pencil-square-o"> {{file.patientName}}</i>
+					<input type="text" ng-model="file.patientName" placeholder="Patients name" file-id="file.id" viewvalue ng-blur="setPatient(file.id,file.patientName)" class="form-control"></input>
+				</div>
+		</div>
+		<div class="fileDetail editableDetail ">
+			<div class="entryLabel">Status:</div>
+				<div class="displayingDiv">
+				 	<i  updatevalue class="fa fa-pencil-square-o">{{statuses[file.status-1].name}}</i>
+					<select ng-model="file.status" ng-options="status.id as status.name for status in statuses" viewvalue ng-change="updateStatus(file.id,file.status)" class="control-label"></select>
+				</div>
+		</div>
+		<div class="fileDetail editableDetail">
+			<div class="entryLabel">Notes:</div>
+				<div class="displayingDiv">
+				<div id="noteContent"> </div>
+				 	<i updatevalue class="fa fa-plus-square-o"></i>
+				 	<i class="fa fa-file-o"  ng-repeat="note in file.notes" notevalue="{{note.note}}" tooltip="{{note.note}}"> </i>
+					<input type="text" ng-model="file.newNote" file-id="{{file.id}}"  placeholder="Write note" viewvalue addnoteelement class="form-control"></input>
+				</div>
+		</div>
+		<div class="fileDetail editableDetail">
+			<div class="entryLabel">Share:</div>
+				<div class="displayingDiv">
+				 	<i updatevalue class="fa fa-plus-square-o"></i>
+				 	<i class="fa fa-user" ng-repeat="share in file.shares" ng-if="share.userid!=file.ownerid"  tooltip="{{share.username}}"> </i>
+				 	<input type="email" ng-model="file.newShare" placeholder="Sharee Email address" viewvalue file-id="{{file.id}}" add-share ang-blur="share(file.id,file.newShare)" class="form-control"></input>
+				</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="clearfix"</div>
+</div>

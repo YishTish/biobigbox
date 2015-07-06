@@ -1,0 +1,540 @@
+/*
+ * Globals
+ */
+
+/* Links */
+
+/* Custom default button */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritence from `body` */
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+html,
+body{
+    background-size: 100%;
+    height: 100%;
+}
+/*
+ * Base structure
+ */
+/*
+html,
+body {
+  height: 100%;
+}
+*/
+body {
+  text-align: center;
+  background: url(/home/backgroundimages/?image=webimage1) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  background-size: 100%;
+}
+
+body.uploadBG {
+  background-image: url(/home/backgroundimages/?image=webimage2);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-size: 100%;
+}
+
+a.bglink {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    text-indent: -5000em;
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+}
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Padding for spacing */
+.inner {
+ padding: 10px;
+}
+
+
+/*
+ * Header
+ */
+.masthead-brand {
+  font-family: "Audiowide", sans-serif;
+  font-size: 30px;
+  text-shadow: none;
+  }
+
+  .masthead-brand:hover {
+    cursor: pointer;
+  }
+
+.masthead-brand .bio{
+  color: dodgerblue;
+}
+
+.masthead-brand .big{
+  color: gray;
+}
+
+.masthead-brand .box{
+  color: gray;
+}
+
+.masthead-brand-slogan{
+  font-family: "Audiowide", sans-serif;
+  color: gray;
+  font-size: 14px;
+}
+
+.masthead-div {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow:  0px 0px 30px 1px rgba(83, 79, 79, 0.67);
+    padding: 0px 25px 0px 25px;
+    float: right;
+    margin-top: 0px;
+}
+
+.masthead-nav {
+    font-family:Arial, sans-serif;
+    text-shadow: none;
+}
+
+.masthead-nav > li  {
+  display: inline-block;
+}
+
+
+.masthead-nav > li + li {
+  margin-left: 20px;
+}
+.masthead-nav > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff; /* IE8 proofing */
+  //color: #A03F43; //rgba(255,255,255,.75);
+  color: gray;
+  border-bottom: 2px solid transparent;
+}
+.masthead-nav > li > a:hover,
+.masthead-nav > li > a:focus {
+  background-color: transparent;
+  border-bottom-color: #a9a9a9;
+  border-bottom-color: rgba(255,255,255,.25);
+  color: rgb(30, 144, 255);
+}
+.masthead-nav > .active > a,
+.masthead-nav > .active > a:hover,
+.masthead-nav > .active > a:focus {
+  color: #A03F43;
+  border-bottom-color: #fff;
+
+}
+
+.masthead-nav > li > .title {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 10px;
+  font-weight: bold;
+  color: dodgerblue;
+  overflow: hidden;
+}
+
+.masthead-nav > li > .selected-a{
+    color: rgb(30, 144, 255);
+}
+
+@media (min-width: 768px) {
+  .masthead-brand {
+   float: center;
+  }
+  .masthead-nav {
+    float: right;
+  }
+}
+
+
+/*
+ * Cover
+ */
+
+.cover {
+  padding: 0 20px;
+}
+.cover .btn-lg {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+
+
+.center-div {
+  width: 40%;
+  float: left;
+  color: #999; /* IE8 proofing */
+  color: grey;//rgba(255,255,255,.5);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow:  0px 0px 10px 7px rgba(83, 79, 79, 0.67);
+  padding: 0px 10px 5px 10px;
+  margin-top: 15%;
+  margin-left: 30%;
+  
+  
+}
+
+.div-title{
+  clear:both;
+  float: left;
+  margin: 15px;
+  font-size: 24px;
+  font-weight: 500;
+  font-family: serif;
+}
+
+.center-div-close{
+  float: right;
+  margin: 5px;
+}
+
+.center-div-content{
+  width: 90%;
+  margin: 15px;
+  text-align: left;
+  text-shadow: none;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.center-div-h3{
+  font-size: 20px;
+  margin: 5px 0px;
+  font-weight: 200;
+}
+
+/*
+ * Footer
+ */
+
+.mastfoot {
+  color: #999; /* IE8 proofing */
+  color: grey;//rgba(255,255,255,.5);
+  background-color: white;
+  border-radius: 10px;
+  box-shadow:  0px 0px 10px 7px rgba(83, 79, 79, 0.67);
+  padding: 0px 10px 5px 10px;
+  float: right;
+  margin-bottom: 30px;
+}
+
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+  /* Pull out the header and footer */
+  .masthead {
+    position: fixed;
+    top: 0;
+  }
+  .mastfoot {
+    position: fixed;
+    bottom: 0;
+  }
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+    float: right;
+  //  margin-right: 50px;
+  }
+}
+
+
+@media (min-width: 992px) {
+  .masthead,
+  .mastfoot,
+  .cover-container {
+  
+  }
+}
+
+
+.quickform>form>input{
+  /*clear:both;
+  float: right;
+  margin-right: 30px;
+  width: 170px;
+   margin-top: -9px;*/
+   margin-bottom: 5px;
+}
+
+.quickform>form>div>input[type=email], input[type=password]{
+  size: 15px;
+  margin-bottom: 5px
+}
+
+
+
+.quickform-error{
+ font-size:12px;
+ color:red;
+ float:left;
+ padding-left: 10px;
+}
+
+.center-div-form{
+  margin: 20px 20px 20px 20px;
+}
+
+/*
+
+input[type=password], input[type=text], textarea, input[type=email]
+{
+    background-color: rgba(223, 144, 59, 0.17);
+    border:solid 1px #BFBDBD;
+    color: #979797;
+    height: 28px;
+    padding-left:10px;
+    box-shadow: 2px 2px 0 #828181 inset;
+    margin: 3px;
+}
+
+input[type=button], button[type=submit]
+{
+    background-color:orange;
+    height: 24px;
+    width: 103px;
+    color: gray;
+    font-weight: bold;
+    text-transform:uppercase;
+    box-shadow:2px 2px #6E6B6A inset;
+    margin: 3px;
+}
+*/
+/*input[type=button], input[type=text], input[type=password], textarea, input[type=email]
+{
+    border: 0;
+    border-radius:5px;
+    font-family: Sansation,Arial;
+}
+*/
+textarea{
+  height: 50px;
+  width: 185px;
+}
+
+
+.successMessage{
+  color: green;
+  font-weight: 600;
+}
+
+.errorMessage{
+  color: red;
+  font-weight: 600;
+}
+
+.fileTable {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.table-striped>tbody>tr:nth-child(odd)>td, 
+.table-striped>tbody>tr:nth-child(odd)>th {
+   background-color: rgba(255, 165, 0, 0.2);
+   color: dodgerblue;
+   width: 30%;
+ }
+
+ .table-striped>tbody>tr:nth-child(even)>td, 
+.table-striped>tbody>tr:nth-child(even)>th {
+    background-color: rgba(128, 128, 128, 0.18);
+     color: dodgerblue;
+ }
+
+.table-striped>tbody>tr>td>a{
+    color:black;
+ }
+
+.table-striped>tbody>tr>td>a:hover{
+    color: orange;
+ }
+
+ .forgotPassword{
+  text-align: left;
+color: dodgerblue;
+text-shadow: 0 1px 3px rgba(0,0,0,.5);
+font-size: 11px;
+padding-left: 5px;
+ }
+ .forgotPassword:hover{
+    cursor: pointer;
+ }
+
+ .upload-form-control{
+  width: 90%;
+  margin-left: 20px;
+ }
+
+ .upload-file-chooser{
+  background-color:white;
+  border-style:dashed;
+  border-width:1px;
+  text-align:center;
+  color:rgba(123, 107, 107, 0.44);
+  width: 90%;
+  margin-left: 20px;
+ }
+
+ .uploadWrapper{
+  margin: 5%;
+ }
+
+.fileDetail{
+  padding-left: 15px;
+  padding-bottom: 5px;
+}
+
+.editableDetail{
+  width:25%;
+  float:left;
+}
+ .fileDetail>.entryLabel{
+  font-weight: bold;
+  text-align: left;
+}
+
+ .fileDetail>.entryValue{
+  font-style: italic;
+}
+
+.fileRange{
+  clear: both;
+  border: 1px solid #e0e0ee;
+  border-radius: 10px;
+  margin: 3px;
+  
+}
+
+.fileMeta{
+  width: 100%;
+  padding-left: 15px;
+  background: #e0e0ee;
+  border-radius: 5px;
+}
+
+
+.fileEntries{
+  clear: both;
+}
+
+.entryHeader{
+ font-weight: bold;
+  font-size: larger;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.entryHeader-date{
+    float: right;
+    margin-right: 3%;
+}
+
+.entryHeader-fname{
+    float: left;
+    margin-left: 3%;
+}
+
+.deleteDiv{
+  float: left;
+  margin-right: 1%;
+  cursor: pointer;
+  color:#428bca;
+}
+
+.detailsCaret{
+  float: left;
+   margin-right: 1%;
+  cursor: pointer;
+    color:#428bca;
+}
+
+.downloadDiv{
+    float:left;
+}
+.line{
+  width:100%;
+}
+
+
+.editingDiv>i{
+  display: none;
+}
+.editingDiv>input{
+  display:inline;
+}
+.editingDiv>select{
+  display:inline;
+}
+
+.displayingDiv>i{
+  display: inline;
+
+}
+.displayingDiv>input,select{
+  display:none;
+}
+
+.newUsersItem{
+    #float: left;
+    list-style-type: none;
+    margin-left: 3%;
+}
+.newUsersItem>label{
+    margin-right: 2%;
+    margin-right: 2%;
+}
+
+.userListTableHeader{
+background-color: rgba(128, 128, 128, 0.17)
+}
+
+.modalCancelGray{
+    background-color: gray;
+    color:white;
+}
